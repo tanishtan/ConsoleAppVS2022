@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Categories>
+    <CategoryId>1</CategoryId>
+    <CategoryName>Beverages</CategoryName>
+    <Description>New value updated to description</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>2</CategoryId>
+    <CategoryName>Condiments</CategoryName>
+    <Description>Sweet and savory sauces, relishes, spreads, and seasonings</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>3</CategoryId>
+    <CategoryName>Confections</CategoryName>
+    <Description>Desserts, candies, and sweet breads</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>4</CategoryId>
+    <CategoryName>Dairy Products</CategoryName>
+    <Description>Cheeses</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>5</CategoryId>
+    <CategoryName>Grains/Cereals</CategoryName>
+    <Description>Breads, crackers, pasta, and cereal</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>6</CategoryId>
+    <CategoryName>Meat/Poultry</CategoryName>
+    <Description>Prepared meats</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>7</CategoryId>
+    <CategoryName>Produce</CategoryName>
+    <Description>Dried fruit and bean curd</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>8</CategoryId>
+    <CategoryName>Seafood</CategoryName>
+    <Description>Seaweed and fish</Description>
+  </Categories>
+  <Categories>
+    <CategoryId>9</CategoryId>
+    <CategoryName>hahaha</CategoryName>
+    <Description>jsjsjsjsjsj</Description>
+  </Categories>
+</NewDataSet>
