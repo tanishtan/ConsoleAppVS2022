@@ -1,7 +1,10 @@
 ﻿//using ConsoleAppADO.Repositories;
 using ConsoleAppVS2022.DataAccess;
+using ConsoleAppVS2022.DI;
 using ConsoleAppVS2022.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System.Collections.Generic;
 
 namespace ConsoleAppVS2022
@@ -388,8 +391,41 @@ namespace ConsoleAppVS2022
                 Console.WriteLine("Id: {0}, comapny: {1}", x.CustomerId, x.CompanyName);
                 Console.WriteLine("COntact: {0}, Locn: {1}-{2}", x.ContactName, x.City, x.Country);
             });*/
-            TestEmployeeRepository();
+            //TestEmployeeRepository();
+            /*            NonDITestClass.Test();
+                        Console.WriteLine("Service locator");
+                        ServiceLocatorTestClass.Test();
+                        Console.WriteLine("\n\ndependency inection sample");
+                        DependencyInjectionSample.Test();
+                        Console.WriteLine("\n\ngeneric sample");
+                        GenericServiceLocatorSample.Test();*/
 
+            /*var services = new ServiceCollection().AddScoped<IServiceA,ServiceA>().AddScoped<IServiceB, ServiceB>();
+
+            IServiceProvider provider = services.BuildServiceProvider();
+
+            var serviceBObj = provider.GetService<IServiceB>();
+            ServiceBClient sac = new ServiceBClient(serviceBObj);
+
+            sac.Start();*/
+
+            /*HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+            builder.Services.AddScoped<IServiceA, ServiceA>();
+            builder.Services.AddScoped<IServiceB, ServiceB>();
+            
+
+            IHost host = builder.Build();
+            RunApp(host.Services);
+            host.Run();*/
+
+            WorkingWithWebApi.test();
+        }
+
+        static void RunApp(IServiceProvider provider)
+        {
+            //var obj = provider.GetService<IServiceB>();
+            ServiceBClient serviceBClient = (ServiceBClient)Activator.CreateInstance(typeof(ServiceBClient), provider.GetService<IServiceB>());
+            serviceBClient.Start();
         }
 
         static void TestEmployeeRepository()
